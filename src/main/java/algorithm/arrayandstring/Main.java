@@ -1,7 +1,5 @@
 package algorithm.arrayandstring;
 
-import algorithm.arrayandstring.CheckUniqueness;
-
 public class Main {
     public static void main(String[] args) {
         testUniqueness();
