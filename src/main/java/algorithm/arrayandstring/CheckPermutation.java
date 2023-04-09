@@ -1,8 +1,9 @@
+// Given two strings, the method returns true if one string is a permutation of another
 package algorithm.arrayandstring;
 
 import java.util.Hashtable;
 import java.util.Arrays;
-// Given two strings, the method returns true if one string is a permutation of another
+
 public class CheckPermutation {
   // Run time O(N)
   public boolean isPermutation(String comparand, String permutationCheck){

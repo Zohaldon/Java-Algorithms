@@ -3,7 +3,7 @@ package algorithm.arrayandstring;
 public class Main {
   public static void main(String[] args) {
     // testUniqueness();
-    testPermutationUsingONMethod();
+    testPermutation();
   }
 
   public static void testUniqueness() {
@@ -12,7 +12,7 @@ public class Main {
     System.out.println("String: " + test_word + " | isUnique: " + test_result);
   }
 
-  public static void testPermutationUsingONMethod(){
+  public static void testPermutation(){
     // A: tester | B: ttrees    (true)
     // A: abcdef | B: dcefba    (true)
     // A: tester | B: tt        (false)
@@ -22,7 +22,8 @@ public class Main {
     String[] permutataions = { "ttrees", "dcefba", "tt",      "dcefbavol", "aaa"};
 
     for(int i = 0; i < comparands.length; i++) {
-      boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
+      // boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
+      boolean test_result = new CheckPermutation().isPermutationUsingSort(comparands[i], permutataions[i]);
       System.out.println("Comparand: " + comparands[i] + " ; Permutation: " + permutataions[i] + "\t\t\t| isPermutation: " + test_result);
     }
   }
