@@ -28,6 +28,12 @@ public class Main {
       boolean test_result = new CheckPermutation().isPermutationUsingSort(comparands[i], permutataions[i]);
       System.out.println("Comparand: " + comparands[i] + " ; Permutation: " + permutataions[i] + "\t\t\t| isPermutation: " + test_result);
     }
+
+    for(int i = 0; i < comparands.length; i++) {
+      // boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
+      boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
+      System.out.println("Comparand: " + comparands[i] + " ; Permutation: " + permutataions[i] + "\t\t\t| isPermutation: " + test_result);
+    }
   }
 
   public static void testURLified(){
