@@ -4,7 +4,8 @@ public class Main {
   public static void main(String[] args) {
     // testUniqueness();
     // testPermutation();
-    testURLified();;
+    // testURLified();
+    testPalindromePermutation();
   }
 
   public static void testUniqueness() {
@@ -44,5 +45,13 @@ public class Main {
       String testOutput = new UrLify().URLifyWhitespace(testInput, 13);
       System.out.println("Input: " + testInput + " | Output: " +  testOutput);
     }
+  }
+
+  public static void testPalindromePermutation(){
+    // input: Tact Coa
+    // output: True ( taco cat, tact coa)
+    String testInput = "AtCo Cta";
+    boolean testOutput = new PalindromePermutation().isPalindromePermutation(testInput);
+    System.out.println("Input: " + testInput + " | Output: " + testOutput );
   }
 }
