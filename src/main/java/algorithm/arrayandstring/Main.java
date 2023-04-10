@@ -23,14 +23,14 @@ public class Main {
     String[] comparands =    { "tester", "abcdef", "tester",  "abcdef",    "aab"};
     String[] permutataions = { "ttrees", "dcefba", "tt",      "dcefbavol", "aaa"};
 
+    System.out.println("O(NlogN) Runtime method");
     for(int i = 0; i < comparands.length; i++) {
-      // boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
       boolean test_result = new CheckPermutation().isPermutationUsingSort(comparands[i], permutataions[i]);
       System.out.println("Comparand: " + comparands[i] + " ; Permutation: " + permutataions[i] + "\t\t\t| isPermutation: " + test_result);
     }
 
+    System.out.println("O(N) Runtime method");
     for(int i = 0; i < comparands.length; i++) {
-      // boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
       boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
       System.out.println("Comparand: " + comparands[i] + " ; Permutation: " + permutataions[i] + "\t\t\t| isPermutation: " + test_result);
     }
