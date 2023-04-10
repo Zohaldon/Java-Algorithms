@@ -2,9 +2,9 @@ package algorithm.arrayandstring;
 
 public class Main {
   public static void main(String[] args) {
-    // testUniqueness();
-    // testPermutation();
-    // testURLified();
+    testUniqueness();
+    testPermutation();
+    testURLified();
     testPalindromePermutation();
   }
 
