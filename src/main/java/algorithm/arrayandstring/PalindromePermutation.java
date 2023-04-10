@@ -15,7 +15,7 @@ public class PalindromePermutation {
     if(input.length() <= 1)
       return true;
 
-    Hashtable<Character, Integer> ledger = new Hashtable<Character, Integer>();
+    Hashtable<Character, Integer> ledger = new Hashtable<>();
 
     for(char c: cleanString(input).toCharArray()){
       if (ledger.containsKey(c)){
@@ -48,9 +48,7 @@ public class PalindromePermutation {
     for(char key: keys){
       int occurrenceCount = ledger.get(key);
 
-      if(occurrenceCount % 2 == 0 ){
-        continue;
-      } else {
+      if(!(occurrenceCount % 2 == 0)){
         oddCharacterCount += 1;
         // if we have 2 character appearing in odd number then given string cannot be a palindrome
         if(oddCharacterCount > 1){ return false; }

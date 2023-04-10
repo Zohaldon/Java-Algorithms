@@ -2,8 +2,6 @@
 // Where input string would already contain enough space to accommodate the '%20' and the character count is provided
 package algorithm.arrayandstring;
 
-import javax.swing.plaf.synth.SynthTextAreaUI;
-
 public class UrLify {
   public String URLifyWhitespace(String input, Integer totalExpectedCharacterCount) {
     if(input.length() == 0)

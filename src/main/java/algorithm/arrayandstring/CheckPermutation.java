@@ -18,7 +18,7 @@ public class CheckPermutation {
 
     // If a given string is a permutation of another string
     // then it should contain all the characters of the other string
-    Hashtable<Character, Integer> checkHash = new Hashtable<Character, Integer>();
+    Hashtable<Character, Integer> checkHash = new Hashtable<>();
 
     // Fill HashTable using comparand's character. Map each character to number of time it has appeared
     for(char c: comparand.toCharArray()){
