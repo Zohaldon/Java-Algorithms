@@ -2,18 +2,8 @@
 // Edit is inserting, replacing or removing a character from the input string.
 package algorithm.arrayandstring;
 
-import java.util.Hashtable;
-
 public class OneEditAway {
   public boolean isOneAway(String targetString, String operandString){
-    // pale  --> ple   | true
-    // ale   --> pale  | true
-    // pales --> pale  | true
-    // pale  --> bale  | true
-    // pale  --> bake  | false
-    // ''    --> a     | true
-
-
     // ********** Insert ************
     // pale  --> ple         | true
     // parth --> path        | true
@@ -74,7 +64,6 @@ public class OneEditAway {
 
       if(targetString.charAt(i) == operandString.charAt(indexForOperandString)){
         indexForOperandString++;
-        continue;
       } else {
         numOfEditRequired++;
 
