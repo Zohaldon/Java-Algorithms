@@ -13,7 +13,8 @@ public class Main {
   public static void testUniqueness() {
     String test_word = "tesT";
     boolean test_result = new CheckUniqueness().isUnique(test_word);
-    System.out.println("String: " + test_word + " | isUnique: " + test_result);
+    System.out.format("%-10s %-10s\n", "Input", "IsUnique");
+    System.out.format("%-10s %-10s\n", test_word, test_result);
   }
 
   public static void testPermutation(){
@@ -26,15 +27,20 @@ public class Main {
     String[] permutataions = { "ttrees", "dcefba", "tt",      "dcefbavol", "aaa"};
 
     System.out.println("O(NlogN) Runtime method");
+    System.out.format("%-10s %15s %20s\n", "Target", "Input", "IsPermutation");
+    System.out.println("------------------------------------------------");
     for(int i = 0; i < comparands.length; i++) {
       boolean test_result = new CheckPermutation().isPermutationUsingSort(comparands[i], permutataions[i]);
-      System.out.println("Comparand: " + comparands[i] + " ; Permutation: " + permutataions[i] + "\t\t\t| isPermutation: " + test_result);
+      System.out.format("%-10s %15s %20s\n", comparands[i], permutataions[i], test_result);
     }
+    System.out.println("------------------------------------------------\n\n");
 
     System.out.println("O(N) Runtime method");
+    System.out.format("%-10s %15s %20s\n", "Target", "Input", "IsPermutation");
+    System.out.println("------------------------------------------------");
     for(int i = 0; i < comparands.length; i++) {
       boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
-      System.out.println("Comparand: " + comparands[i] + " ; Permutation: " + permutataions[i] + "\t\t\t| isPermutation: " + test_result);
+      System.out.format("%-10s %15s %20s\n", comparands[i], permutataions[i], test_result);
     }
   }
 
@@ -49,10 +55,13 @@ public class Main {
       "3a2s1d8q5we34&*@3"
     };
 
+    System.out.format("%-20s %15s\n", "Input", "Output");
+    System.out.println("--------------------------------------------");
     for(String testInput: inputs){
       String testOutput = new UrLify().URLifyWhitespace(testInput, 13);
-      System.out.println("Input: " + testInput + " | Output: " +  testOutput);
+      System.out.format("%-20s %20s\n", testInput, testOutput);
     }
+    System.out.println("--------------------------------------------");
   }
 
   public static void testPalindromePermutation(){
