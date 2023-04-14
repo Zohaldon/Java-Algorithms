@@ -3,10 +3,11 @@ package algorithm.arrayandstring;
 public class Main {
   public static void main(String[] args) {
     // TODO: Add unit tests for the algorithms
-    testUniqueness();
-    testPermutation();
-    testURLified();
-    testPalindromePermutation();
+//    testUniqueness();
+//    testPermutation();
+//    testURLified();
+//    testPalindromePermutation();
+    testOneAway();
   }
 
   public static void testUniqueness() {
@@ -60,5 +61,30 @@ public class Main {
     String testInput = "AtCo Cta";
     boolean testOutput = new PalindromePermutation().isPalindromePermutation(testInput);
     System.out.println("Input: " + testInput + " | Output: " + testOutput );
+  }
+
+  public static void testOneAway(){
+    String[][] inputs = {
+      { "pale", "ple" },
+      { "ale", "pale" },
+      { "pales", "pale" },
+      { "pale", "bale" },
+      { "pale", "bake" },
+      { "", "a" },
+      { "top", "po" },
+      { "topper", "opped" },
+      { "b", "" },
+      { "pap", "pab"}
+    };
+
+    System.out.format("%-8s %10s %15s", "Target", "Input", "IsOneEditAway\n");
+    System.out.println("--------------------------------------------");
+    for(String[] inputSet: inputs){
+      String target = inputSet[0];
+      String input = inputSet[1];
+      boolean result = new OneEditAway().isOneAway(target, input);
+      System.out.format("%-10s %8s %10s\n", target, input, result);
+    }
+    System.out.println("--------------------------------------------");
   }
 }
