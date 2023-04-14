@@ -24,14 +24,14 @@ public class Main {
     // A: abcdef | B: dcefbavol (false)
     // A: aab    | B: aaa       (false)
     String[] comparands =    { "tester", "abcdef", "tester",  "abcdef",    "aab"};
-    String[] permutataions = { "ttrees", "dcefba", "tt",      "dcefbavol", "aaa"};
+    String[] permutations = { "ttrees", "dcefba", "tt",      "dcefbavol", "aaa"};
 
     System.out.println("O(NlogN) Runtime method");
     System.out.format("%-10s %15s %20s\n", "Target", "Input", "IsPermutation");
     System.out.println("------------------------------------------------");
     for(int i = 0; i < comparands.length; i++) {
-      boolean test_result = new CheckPermutation().isPermutationUsingSort(comparands[i], permutataions[i]);
-      System.out.format("%-10s %15s %20s\n", comparands[i], permutataions[i], test_result);
+      boolean test_result = new CheckPermutation().isPermutationUsingSort(comparands[i], permutations[i]);
+      System.out.format("%-10s %15s %20s\n", comparands[i], permutations[i], test_result);
     }
     System.out.println("------------------------------------------------\n\n");
 
@@ -39,8 +39,8 @@ public class Main {
     System.out.format("%-10s %15s %20s\n", "Target", "Input", "IsPermutation");
     System.out.println("------------------------------------------------");
     for(int i = 0; i < comparands.length; i++) {
-      boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutataions[i]);
-      System.out.format("%-10s %15s %20s\n", comparands[i], permutataions[i], test_result);
+      boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutations[i]);
+      System.out.format("%-10s %15s %20s\n", comparands[i], permutations[i], test_result);
     }
   }
 
