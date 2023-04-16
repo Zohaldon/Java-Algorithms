@@ -87,7 +87,7 @@ public class Main {
       { "pap", "pab"}
     };
 
-    System.out.format("%-8s %10s %15s", "Target", "Input", "IsOneEditAway\n");
+    System.out.format("%-8s %10s %15s\n", "Target", "Input", "IsOneEditAway");
     System.out.println("--------------------------------------------");
     for(String[] inputSet: inputs){
       String target = inputSet[0];
