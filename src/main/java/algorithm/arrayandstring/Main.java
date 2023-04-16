@@ -8,6 +8,7 @@ public class Main {
     testURLified();
     testPalindromePermutation();
     testOneAway();
+    testStringCompressor();
   }
 
   public static void testUniqueness() {
@@ -93,6 +94,18 @@ public class Main {
       String input = inputSet[1];
       boolean result = new OneEditAway().isOneAway(target, input);
       System.out.format("%-10s %8s %10s\n", target, input, result);
+    }
+    System.out.println("--------------------------------------------");
+  }
+
+  public static void testStringCompressor(){
+    String[] inputs = { "aaa", "C", "DD", "aAz", "mooooooooon", "aabb", "aaaabbb", "ZOOOOOOoOOOooooooMMMMMmm"};
+
+    System.out.format("%-30s %-25s\n", "Input", "CompressedFormat");
+    System.out.println("--------------------------------------------");
+    for(String input: inputs){
+      String result = new StringCompression().compress(input);
+      System.out.format("%-30s %-30s\n", input, result);
     }
     System.out.println("--------------------------------------------");
   }
