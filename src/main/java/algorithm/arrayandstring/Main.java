@@ -3,12 +3,13 @@ package algorithm.arrayandstring;
 public class Main {
   public static void main(String[] args) {
     // TODO: Add unit tests for the algorithms
-    testUniqueness();
-    testPermutation();
-    testURLified();
-    testPalindromePermutation();
-    testOneAway();
-    testStringCompressor();
+//    testUniqueness();
+//    testPermutation();
+//    testURLified();
+//    testPalindromePermutation();
+//    testOneAway();
+//    testStringCompressor();
+    testRotateMatrix();
   }
 
   public static void testUniqueness() {
@@ -108,5 +109,58 @@ public class Main {
       System.out.format("%-30s %-30s\n", input, result);
     }
     System.out.println("--------------------------------------------");
+  }
+
+  public static void testRotateMatrix(){
+    int[][] matrix1 = {
+      { 81, 77, 43, 38 },
+      { 12, 41, 80, 9 },
+      { 21, 16, 17, 10 },
+      { 23, 18, 11, 15 }
+    };
+
+    int[][] matrix2 ={
+       {11, 12, 15},
+       {30, 42, 45},
+       {19, 50, 79}
+     };
+
+    int[][] matrix3 = {
+      {1}
+    };
+
+    int[][] matrix4 = {
+      {3, 5},
+      {9, 0}
+    };
+
+    int[][][] inputs = { matrix1, matrix2, matrix3, matrix4 };
+
+    for(int[][] matrix: inputs){
+      int[][] result = RotateMatrix.rotateNintyDegree(matrix);
+
+      System.out.println("Input Matrix:");
+      printMatrix(matrix);
+
+      System.out.println("Output Matrix:");
+      printMatrix(result);
+    }
+
+  }
+
+  private static void printMatrix(int[][] matrix){
+    int l = matrix.length;
+    if(l == 1){
+      System.out.println(matrix[0][0]);
+    }
+    else {
+      for (int[] row : matrix) {
+        for (int col = 0; col < l; col++) {
+          System.out.format("%2s ", row[col]);
+        }
+        System.out.println();
+      }
+    }
+    System.out.println();
   }
 }
