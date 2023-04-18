@@ -1,5 +1,6 @@
 // An Algorithm that if an elements in an M x N matrix is 0, then it sets the entire row and column to 0.
 package algorithm.arrayandstring;
+import java.util.Arrays;
 import java.util.Hashtable;
 
 public class ZeroMatrix {
@@ -39,10 +40,7 @@ public class ZeroMatrix {
 
     for(int i = 0; i < rowLength; i++){
       if(rowToZeroLedger.containsKey(i)){
-        // Alternative approach => Arrays.fill(matrix[i], 0)
-        for(int j = 0; j < colLength; j++){
-          matrix[i][j] = 0;
-        }
+        Arrays.fill(matrix[i], 0);
         continue;
       }
 
@@ -59,10 +57,7 @@ public class ZeroMatrix {
   private static int[][] generateZeroMatrix(int rowLength, int colLength){
     int[][] zeroMatrix = new int[rowLength][colLength];
     for(int i = 0; i < rowLength; i ++){
-      // Alternative approach => Arrays.fill(zeroMatrix[i], 0)
-      for(int j = 0; j < colLength; j++){
-        zeroMatrix[i][j] = 0;
-      }
+      Arrays.fill(zeroMatrix[i], 0);
     }
     return zeroMatrix;
   }
