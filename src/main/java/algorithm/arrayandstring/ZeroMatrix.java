@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Hashtable;
 
 public class ZeroMatrix {
+  // Runtime: O(M x N)
   public static int[][] transformMatrix(int[][] matrix){
     int rowLength = matrix.length;
     int colLength = matrix[0].length;
