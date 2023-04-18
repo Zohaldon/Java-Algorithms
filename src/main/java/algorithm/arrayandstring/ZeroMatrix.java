@@ -1,7 +1,5 @@
 // An Algorithm that if an elements in an M x N matrix is 0, then it sets the entire row and column to 0.
 package algorithm.arrayandstring;
-
-import java.util.Arrays;
 import java.util.Hashtable;
 
 public class ZeroMatrix {
