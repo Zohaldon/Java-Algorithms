@@ -3,18 +3,18 @@ package algorithm.arrayandstring;
 public class Main {
   public static void main(String[] args) {
     // TODO: Add unit tests for the algorithms
-//    testUniqueness();
-//    testPermutation();
-//    testURLified();
-//    testPalindromePermutation();
-//    testOneAway();
-//    testStringCompressor();
+    testUniqueness();
+    testPermutation();
+    testURLified();
+    testPalindromePermutation();
+    testOneAway();
+    testStringCompressor();
     testRotateMatrix();
   }
 
   public static void testUniqueness() {
     String test_word = "tesT";
-    boolean test_result = new CheckUniqueness().isUnique(test_word);
+    boolean test_result = CheckUniqueness.isUnique(test_word);
     System.out.format("%-10s %-10s\n", "Input", "IsUnique");
     System.out.format("%-10s %-10s\n", test_word, test_result);
   }
@@ -32,7 +32,7 @@ public class Main {
     System.out.format("%-10s %15s %20s\n", "Target", "Input", "IsPermutation");
     System.out.println("------------------------------------------------");
     for(int i = 0; i < comparands.length; i++) {
-      boolean test_result = new CheckPermutation().isPermutationUsingSort(comparands[i], permutations[i]);
+      boolean test_result = CheckPermutation.isPermutationUsingSort(comparands[i], permutations[i]);
       System.out.format("%-10s %15s %20s\n", comparands[i], permutations[i], test_result);
     }
     System.out.println("------------------------------------------------\n\n");
@@ -41,7 +41,7 @@ public class Main {
     System.out.format("%-10s %15s %20s\n", "Target", "Input", "IsPermutation");
     System.out.println("------------------------------------------------");
     for(int i = 0; i < comparands.length; i++) {
-      boolean test_result = new CheckPermutation().isPermutation(comparands[i], permutations[i]);
+      boolean test_result = CheckPermutation.isPermutation(comparands[i], permutations[i]);
       System.out.format("%-10s %15s %20s\n", comparands[i], permutations[i], test_result);
     }
   }
@@ -60,7 +60,7 @@ public class Main {
     System.out.format("%-20s %15s\n", "Input", "Output");
     System.out.println("--------------------------------------------");
     for(String testInput: inputs){
-      String testOutput = new UrLify().URLifyWhitespace(testInput, 13);
+      String testOutput = UrLify.URLifyWhitespace(testInput, 13);
       System.out.format("%-20s %20s\n", testInput, testOutput);
     }
     System.out.println("--------------------------------------------");
@@ -70,7 +70,7 @@ public class Main {
     // input: Tact Coa
     // output: True ( taco cat, tact coa)
     String testInput = "AtCo Cta";
-    boolean testOutput = new PalindromePermutation().isPalindromePermutation(testInput);
+    boolean testOutput = PalindromePermutation.isPalindromePermutation(testInput);
     System.out.println("Input: " + testInput + " | Output: " + testOutput );
   }
 
@@ -93,7 +93,7 @@ public class Main {
     for(String[] inputSet: inputs){
       String target = inputSet[0];
       String input = inputSet[1];
-      boolean result = new OneEditAway().isOneAway(target, input);
+      boolean result = OneEditAway.isOneAway(target, input);
       System.out.format("%-10s %8s %10s\n", target, input, result);
     }
     System.out.println("--------------------------------------------");
@@ -105,7 +105,7 @@ public class Main {
     System.out.format("%-30s %-25s\n", "Input", "CompressedFormat");
     System.out.println("--------------------------------------------");
     for(String input: inputs){
-      String result = new StringCompression().compress(input);
+      String result = StringCompression.compress(input);
       System.out.format("%-30s %-30s\n", input, result);
     }
     System.out.println("--------------------------------------------");

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CheckUniqueness {
   // Run time O(N)
-  public boolean isUnique(String word) {
+  public static boolean isUnique(String word) {
     // if the string is empty it is unique as it has no duplication.
     if (word.length() <= 1)
       return true;

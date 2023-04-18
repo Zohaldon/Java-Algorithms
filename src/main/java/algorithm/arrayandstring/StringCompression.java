@@ -4,7 +4,8 @@
 package algorithm.arrayandstring;
 
 public class StringCompression{
-  public String compress(String input){
+  // Runtime: O(N)
+  public static String compress(String input){
     if(input.length() < 3)
       return input;
 

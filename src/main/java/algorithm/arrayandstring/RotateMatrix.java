@@ -2,6 +2,7 @@
 package algorithm.arrayandstring;
 
 public class RotateMatrix {
+  // Runtime O(N)
   public static int[][] rotateNintyDegree(int[][] matrix){
     // {
     //   {11, 12, 15},  00 01 02 --> 02 12 22

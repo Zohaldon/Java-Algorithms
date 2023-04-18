@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class CheckPermutation {
   // Run time O(N)
-  public boolean isPermutation(String comparand, String permutationCheck){
+  public static boolean isPermutation(String comparand, String permutationCheck){
     // Handle empty values
     if (comparand.length() == 0 & permutationCheck.length() == 0)
       return true;
@@ -51,7 +51,7 @@ public class CheckPermutation {
   }
 
   // Run time O(N LogN)
-  public boolean isPermutationUsingSort(String comparand, String permutationCheck){
+  public static boolean isPermutationUsingSort(String comparand, String permutationCheck){
     // Handle empty values
     if (comparand.length() == 0 & permutationCheck.length() == 0)
       return true;

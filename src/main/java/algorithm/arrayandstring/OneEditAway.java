@@ -3,7 +3,8 @@
 package algorithm.arrayandstring;
 
 public class OneEditAway {
-  public boolean isOneAway(String targetString, String operandString){
+  // Runtime O(N)
+  public static boolean isOneAway(String targetString, String operandString){
     // ********** Insert ************
     // pale  --> ple         | true
     // parth --> path        | true
@@ -34,15 +35,15 @@ public class OneEditAway {
     }
   }
 
-  private boolean isOneInsertAway(String targetString, String operandString){
+  private static boolean isOneInsertAway(String targetString, String operandString){
     return isOneEditAway(targetString, operandString);
   }
 
-  private boolean isOneDeleteAway(String targetString, String operandString){
+  private static boolean isOneDeleteAway(String targetString, String operandString){
     return isOneEditAway(operandString, targetString);
   }
 
-  private boolean isOneReplaceAway(String targetString, String operandString){
+  private static boolean isOneReplaceAway(String targetString, String operandString){
     int numOfReplacement = 0;
     for(int i = 0; i < targetString.length(); i++){
       if(numOfReplacement > 1)
@@ -54,7 +55,7 @@ public class OneEditAway {
     return true;
   }
 
-  private boolean isOneEditAway(String targetString, String operandString){
+  private static boolean isOneEditAway(String targetString, String operandString){
     int numOfEditRequired = 0;
     int indexForOperandString = 0;
     for(int i = 0; i < targetString.length(); i++){

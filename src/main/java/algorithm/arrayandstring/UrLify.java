@@ -3,7 +3,8 @@
 package algorithm.arrayandstring;
 
 public class UrLify {
-  public String URLifyWhitespace(String input, Integer totalExpectedCharacterCount) {
+  // Runtime: O(N)
+  public static String URLifyWhitespace(String input, Integer totalExpectedCharacterCount) {
     if(input.length() == 0)
       return "";
 

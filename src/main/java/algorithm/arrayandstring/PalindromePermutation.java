@@ -7,7 +7,7 @@ import java.util.Set;
 
 // Run time: O(N)
 public class PalindromePermutation {
-  public boolean isPalindromePermutation(String input){
+  public static boolean isPalindromePermutation(String input){
     // If a given string is a palindrome permutation then all of its characters should appear in even amount, with
     // one character appearing once being a valid case
     // xxAxx
@@ -29,15 +29,15 @@ public class PalindromePermutation {
     return isPalindrome(ledger);
   }
 
-  private String cleanString(String input){
+  private static String cleanString(String input){
     return keepAlphabetsOnly(input.toLowerCase());
   }
 
-  private String keepAlphabetsOnly(String input){
+  private static String keepAlphabetsOnly(String input){
     return input.replaceAll("\\W", "");
   }
 
-  private boolean isPalindrome(Hashtable<Character, Integer> ledger){
+  private static boolean isPalindrome(Hashtable<Character, Integer> ledger){
     // If a given string with N character is a palindrome
     // then either all N characters should occur in even multiple OR
     // N - 1 characters are even, with one character appearing once (Pivot character)
