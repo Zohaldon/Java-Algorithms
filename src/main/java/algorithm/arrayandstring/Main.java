@@ -3,13 +3,14 @@ package algorithm.arrayandstring;
 public class Main {
   public static void main(String[] args) {
     // TODO: Add unit tests for the algorithms
-    testUniqueness();
-    testPermutation();
-    testURLified();
-    testPalindromePermutation();
-    testOneAway();
-    testStringCompressor();
-    testRotateMatrix();
+//    testUniqueness();
+//    testPermutation();
+//    testURLified();
+//    testPalindromePermutation();
+//    testOneAway();
+//    testStringCompressor();
+//    testRotateMatrix();
+    testZeroMatrix();
   }
 
   public static void testUniqueness() {
@@ -148,14 +149,51 @@ public class Main {
 
   }
 
+  public static void testZeroMatrix(){
+    int[][] matrix1 = {
+      { 15, 0 , 18 },
+      { 13, 11, 12 },
+      { 11, 12, 14 },
+      { 19, 18, 11 }
+    };
+    int[][] matrix2 = {
+      { 1, 2, 5, 9 },
+      { 7, 9, 0, 7 },
+      { 9, 6, 2, 1 },
+      { 8, 7, 4, 0 }
+    };
+    int[][] matrix3 = {
+      { 1, 3, 4 },
+      { 0, 2, 1 }
+    };
+    int[][] matrix4 = {
+      { 1, 2 },
+      { 3, 0 },
+      { 0, 2 }
+    };
+    int[][] matrix5 = { { 0 } };
+    int[][] matrix6 = { { 1, 0 } };
+
+    int[][][] inputMatrices = { matrix1, matrix2, matrix3, matrix4, matrix5, matrix6 };
+
+    for(int[][] matrix: inputMatrices){
+      System.out.println("Input Matrix:");
+      printMatrix(matrix);
+
+      int[][] result = ZeroMatrix.transformMatrix(matrix);
+
+      System.out.println("Output Matrix:");
+      printMatrix(result);
+    }
+  }
   private static void printMatrix(int[][] matrix){
-    int l = matrix.length;
-    if(l == 1){
+    int colLength = matrix[0].length;
+    if(colLength == 1){
       System.out.println(matrix[0][0]);
     }
     else {
       for (int[] row : matrix) {
-        for (int col = 0; col < l; col++) {
+        for (int col = 0; col < colLength; col++) {
           System.out.format("%2s ", row[col]);
         }
         System.out.println();
