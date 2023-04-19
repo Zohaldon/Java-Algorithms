@@ -11,6 +11,7 @@ public class Main {
     testStringCompressor();
     testRotateMatrix();
     testZeroMatrix();
+    testStringRotation();
   }
 
   public static void testUniqueness() {
@@ -186,6 +187,42 @@ public class Main {
       printMatrix(result);
     }
   }
+
+  public static void testStringRotation(){
+
+    // Valid Rotations
+    // s1: "waterbottle"
+    // s2: "erbottlewat"
+
+    // s1: "tester"
+    // s2: "sterte"
+
+    // Invalid rotations
+    // s1: "waterbottle"
+    // s2: "elwaterbott"
+
+    // s1: "lordOfTheRing"
+    // s2: "lordOfTheRin"
+    // s2: "lordOfTheRings"
+    String[][] inputs = {
+      { "waterbottle", "erbottlewat" },
+      { "tester", "sterte" },
+      { "waterbottle", "elwaterbott" },
+      { "lordOfTheRing", "lordOfTheRin" },
+      { "lordOfTheRing", "lordOfTheRings" },
+      { "sssas", "ssass" },
+      { "a", "b" }
+    };
+
+    System.out.format("%20s %20s %20s\n", "S1", "S2", "IsRotation?");
+    System.out.println("---------------------------------------------------------------");
+    for(String[] inputSet: inputs){
+      boolean result = StringRotation.isRotation(inputSet[0], inputSet[1]);
+      System.out.format("%20s %20s %20s\n", inputSet[0], inputSet[1], result);
+    }
+    System.out.println("---------------------------------------------------------------");
+  }
+
   private static void printMatrix(int[][] matrix){
     int colLength = matrix[0].length;
     if(colLength == 1){
