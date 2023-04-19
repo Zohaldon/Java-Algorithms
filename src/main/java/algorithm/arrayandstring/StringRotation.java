@@ -7,13 +7,6 @@ public class StringRotation {
     if(s1.length() != s2.length())
       return false;
 
-    StringBuilder s2Repeated = new StringBuilder();
-
-    // concatenate two strings together
-    for(int i = 0; i < 2; i++){
-      s2Repeated.append(s2);
-    }
-
-    return s2Repeated.toString().contains(s1);
+    return s2.repeat(2).contains(s1);
   }
 }
