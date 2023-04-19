@@ -113,7 +113,7 @@ public class Main {
     System.out.println("--------------------------------------------");
   }
 
-  public static void testRotateMatrix(){
+  public static void testRotateMatrix() {
     int[][] matrix1 = {
       { 81, 77, 43, 38 },
       { 12, 41, 80, 9 },
@@ -139,13 +139,18 @@ public class Main {
     int[][][] inputs = { matrix1, matrix2, matrix3, matrix4 };
 
     for(int[][] matrix: inputs){
-      int[][] result = RotateMatrix.rotateNintyDegree(matrix);
+      try{
+        int[][] result = RotateMatrix.rotateNintyDegree(matrix);
+        System.out.println("Input Matrix:");
+        printMatrix(matrix);
 
-      System.out.println("Input Matrix:");
-      printMatrix(matrix);
-
-      System.out.println("Output Matrix:");
-      printMatrix(result);
+        System.out.println("Output Matrix:");
+        printMatrix(result);
+      } catch (Exception e)
+      {
+        System.out.println(e.getMessage());
+        continue;
+      }
     }
 
   }

@@ -3,7 +3,7 @@ package algorithm.arrayandstring;
 
 public class RotateMatrix {
   // Runtime O(N)
-  public static int[][] rotateNintyDegree(int[][] matrix){
+  public static int[][] rotateNintyDegree(int[][] matrix) throws Exception{
     // {
     //   {11, 12, 15},  00 01 02 --> 02 12 22
     //   {30, 42, 45},  10 11 12 --> 01 11 21
@@ -14,6 +14,9 @@ public class RotateMatrix {
     // Handle the case where matrix is a vector
     if(l == 1)
       return matrix;
+    // Handle the case where matrix's length is not equal
+    if(matrix[0].length != matrix.length)
+      throw new Exception("Length of matrix is not NxN");
 
     int[][] result = new int[l][l];
 
