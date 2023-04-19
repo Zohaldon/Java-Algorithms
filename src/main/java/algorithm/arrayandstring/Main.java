@@ -193,21 +193,6 @@ public class Main {
   }
 
   public static void testStringRotation(){
-
-    // Valid Rotations
-    // s1: "waterbottle"
-    // s2: "erbottlewat"
-
-    // s1: "tester"
-    // s2: "sterte"
-
-    // Invalid rotations
-    // s1: "waterbottle"
-    // s2: "elwaterbott"
-
-    // s1: "lordOfTheRing"
-    // s2: "lordOfTheRin"
-    // s2: "lordOfTheRings"
     String[][] inputs = {
       { "waterbottle", "erbottlewat" },
       { "tester", "sterte" },
