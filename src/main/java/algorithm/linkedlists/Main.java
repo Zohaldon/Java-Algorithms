@@ -1,10 +1,5 @@
 package algorithm.linkedlists;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
 public class Main {
   public static void main(String[] args){
     // test code goes here666
