@@ -3,9 +3,9 @@ package algorithm.linkedlists;
 public class DoublyLinkedList {
   // Starting and ending node of the DoublyLinkedList
   Node head, tail = null;
-  public int size = 0;
+  private int size = 0;
 
-  static class Node {
+  public static class Node {
     public Node prev;
     public Node next;
     public char data;
@@ -15,6 +15,10 @@ public class DoublyLinkedList {
       next = null;
       prev = null;
     }
+  }
+
+  public int size() {
+    return size;
   }
 
   public void addNode(char data){
@@ -47,7 +51,7 @@ public class DoublyLinkedList {
     }
   }
 
-  private void removeNode(Node node){
+  public void removeNode(Node node){
     if(size == 1){
       head = tail = null;
       size = 0;
@@ -74,6 +78,20 @@ public class DoublyLinkedList {
 
       size--;
     }
+  }
+
+  public Node get(int index){
+    if(size == 0 || index > size)
+      return null;
+
+    Node current = head;
+    for(int i = 0; i < size; i++){
+      if(i == index)
+        break;
+      current = current.next;
+    }
+
+    return current;
   }
 
   public void printLinkedList(){
