@@ -2,8 +2,7 @@ package algorithm.linkedlists;
 
 public class Main {
   public static void main(String[] args){
-    // test code goes here666
-//    testDoublyLinkedList();
+    testDoublyLinkedList();
     testRemoveDups();
   }
 
