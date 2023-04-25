@@ -4,7 +4,7 @@ package algorithm.linkedlists;
 import java.util.*;
 
 public class RemoveDups {
-  public static <T> DoublyLinkedList removeDuplicates(DoublyLinkedList linkedList){
+  public static DoublyLinkedList removeDuplicates(DoublyLinkedList linkedList){
     if(linkedList.size() < 2)
       return linkedList;
 
