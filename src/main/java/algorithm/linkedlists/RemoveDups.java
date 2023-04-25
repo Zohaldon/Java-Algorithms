@@ -4,21 +4,19 @@ package algorithm.linkedlists;
 import java.util.*;
 
 public class RemoveDups {
-  public static <T> LinkedList<T> removeDuplicatesWithBuffer(LinkedList<T> linkedList){
+  public static <T> DoublyLinkedList removeDuplicates(DoublyLinkedList linkedList){
     if(linkedList.size() < 2)
       return linkedList;
 
-    // 1 -> 5 -> 2 -> 5 -> 1 -> 3
-    // "aa" -> "cc" -> "cc" -> "aa"
-    List<T> seenItems = new ArrayList<>();
+    var seenItems = new ArrayList<>();
     for(int i = 0; i < linkedList.size(); i++){
-      T item = linkedList.get(i);
-      if(!seenItems.contains(item)){
-        seenItems.add(item);
+      DoublyLinkedList.Node item = linkedList.get(i);
+      if(!seenItems.contains(item.data)){
+        seenItems.add(item.data);
         continue;
       }
 
-      linkedList.remove(i);
+      linkedList.removeNodeAtIndex(i);
       i--;
     }
     return linkedList;
