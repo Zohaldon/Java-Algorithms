@@ -12,7 +12,7 @@ public class SinglyLinkedList {
       next = null;
     }
   }
-  public int getSize(){
+  public int size(){
     return size;
   }
 
