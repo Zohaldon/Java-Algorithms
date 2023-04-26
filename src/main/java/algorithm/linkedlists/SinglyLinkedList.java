@@ -38,6 +38,8 @@ public class SinglyLinkedList {
   }
 
   public Node returnKthFromLast(int k){
+    // An Algorithm that returns Kth element from last
+    // RunTime - O(N)
     Node current = head;
 
     if(k > size || k < 1)
