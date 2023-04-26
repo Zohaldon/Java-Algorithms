@@ -4,8 +4,8 @@ package algorithm.linkedlists;
 public class KthFromLast {
 
   // RunTime - O(N)
-  public static SinglyLinkedList.Node getKthFromLast(SinglyLinkedList linkedList, int k){
-    SinglyLinkedList.Node current = linkedList.head;
+  public static <T> SinglyNode<T> getKthFromLast(SinglyLinkedList<T> linkedList, int k){
+    SinglyNode<T> current = linkedList.head;
 
     if(k >= linkedList.size() || k < 0)
       throw new ArrayIndexOutOfBoundsException();

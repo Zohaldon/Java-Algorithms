@@ -44,7 +44,7 @@ public class Main {
   }
 
   public static void testSinglyLinkedList(){
-    SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+    SinglyLinkedList<Character> singlyLinkedList = new SinglyLinkedList<>();
     singlyLinkedList.addNode('a');
     singlyLinkedList.addNode('b');
 
@@ -52,7 +52,7 @@ public class Main {
   }
 
   public static void testKthFromLast(){
-    SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+    SinglyLinkedList<Character> singlyLinkedList = new SinglyLinkedList<>();
     singlyLinkedList.addNode('a');
     singlyLinkedList.addNode('b');
     singlyLinkedList.addNode('c');
