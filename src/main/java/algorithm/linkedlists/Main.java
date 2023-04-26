@@ -3,6 +3,7 @@ package algorithm.linkedlists;
 public class Main {
   public static void main(String[] args){
     testDoublyLinkedList();
+    testSinglyLinkedList();
     testRemoveDups();
   }
 
@@ -39,5 +40,13 @@ public class Main {
     doublyLinkedList.printLinkedList();
     System.out.println();
     System.out.println(doublyLinkedList.size());
+  }
+
+  public static void testSinglyLinkedList(){
+    SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+    singlyLinkedList.addNode('a');
+    singlyLinkedList.addNode('b');
+
+    singlyLinkedList.print();
   }
 }
