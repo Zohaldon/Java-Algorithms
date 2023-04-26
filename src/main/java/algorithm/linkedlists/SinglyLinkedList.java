@@ -1,23 +1,14 @@
 package algorithm.linkedlists;
 
-public class SinglyLinkedList {
-  Node head, tail = null;
+public class SinglyLinkedList<T> {
+  SinglyNode<T> head, tail = null;
   private int size = 0;
-  public static class Node {
-    public char data;
-    public Node next;
-
-    Node(char data){
-      this.data = data;
-      next = null;
-    }
-  }
   public int size(){
     return size;
   }
 
-  public void addNode(char data){
-    Node node = new Node(data);
+  public void addNode(T data){
+    SinglyNode<T> node = new SinglyNode<T>(data);
 
     if(head == null){
       head = tail = node;
@@ -30,7 +21,7 @@ public class SinglyLinkedList {
   }
 
   public void print(){
-    Node current = head;
+    SinglyNode<T> current = head;
     for(int i = 0; i < size; i++){
      System.out.print(current.data + " -> ");
      current = current.next;
