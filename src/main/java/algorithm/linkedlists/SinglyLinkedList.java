@@ -36,4 +36,19 @@ public class SinglyLinkedList {
      current = current.next;
     }
   }
+
+  public Node returnKthFromLast(int k){
+    Node current = head;
+
+    if(k > size || k < 1)
+      throw new ArrayIndexOutOfBoundsException();
+
+
+    int indexToReturn = (size - k) + 1;
+    for(int i = 1; i < indexToReturn; i++){
+      current = current.next;
+    }
+
+    return current;
+  }
 }

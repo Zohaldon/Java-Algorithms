@@ -5,6 +5,7 @@ public class Main {
     testDoublyLinkedList();
     testSinglyLinkedList();
     testRemoveDups();
+    testKthFromLast();
   }
 
   public static void testRemoveDups(){
@@ -48,5 +49,13 @@ public class Main {
     singlyLinkedList.addNode('b');
 
     singlyLinkedList.print();
+  }
+
+  public static void testKthFromLast(){
+    SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+    singlyLinkedList.addNode('a');
+    singlyLinkedList.addNode('b');
+
+    System.out.println(singlyLinkedList.returnKthFromLast(3).data);
   }
 }
