@@ -8,7 +8,7 @@ public class SinglyLinkedList<T> {
   }
 
   public void addNode(T data){
-    SinglyNode<T> node = new SinglyNode<T>(data);
+    SinglyNode<T> node = new SinglyNode<>(data);
 
     if(head == null){
       head = tail = node;
