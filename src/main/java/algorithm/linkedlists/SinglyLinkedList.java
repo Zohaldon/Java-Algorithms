@@ -36,21 +36,4 @@ public class SinglyLinkedList {
      current = current.next;
     }
   }
-
-  public Node returnKthFromLast(int k){
-    // An Algorithm that returns Kth element from last
-    // RunTime - O(N)
-    Node current = head;
-
-    if(k > size || k < 1)
-      throw new ArrayIndexOutOfBoundsException();
-
-
-    int indexToReturn = (size - k) + 1;
-    for(int i = 1; i < indexToReturn; i++){
-      current = current.next;
-    }
-
-    return current;
-  }
 }
