@@ -55,7 +55,11 @@ public class Main {
     SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
     singlyLinkedList.addNode('a');
     singlyLinkedList.addNode('b');
+    singlyLinkedList.addNode('c');
+    singlyLinkedList.addNode('d');
+    singlyLinkedList.addNode('e');
 
-    System.out.println(singlyLinkedList.returnKthFromLast(3).data);
+
+    System.out.println(KthFromLast.getKthFromLast(singlyLinkedList, 3).data);
   }
 }
