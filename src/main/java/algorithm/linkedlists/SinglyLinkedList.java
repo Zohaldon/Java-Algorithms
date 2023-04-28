@@ -64,7 +64,6 @@ public class SinglyLinkedList<T> {
         nextNode = current.next;
         if(current == nodeToDelete){
           if(current ==  head){
-            // we are removing first node
             head = nextNode;
           } else if(current == tail){
             tail = prevNode;
