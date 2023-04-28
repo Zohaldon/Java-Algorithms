@@ -9,7 +9,7 @@ public class Main {
   }
 
   public static void testRemoveDups(){
-    DoublyLinkedList inputLinkedList = new DoublyLinkedList();
+    DoublyLinkedList<Character> inputLinkedList = new DoublyLinkedList<>();
     inputLinkedList.addNode('a');
     inputLinkedList.addNode('b');
     inputLinkedList.addNode('a');
@@ -19,14 +19,14 @@ public class Main {
     System.out.println("Input: ");
     inputLinkedList.printLinkedList();
     System.out.println();
-    DoublyLinkedList result = RemoveDups.removeDuplicates(inputLinkedList);
+    DoublyLinkedList<Character> result = RemoveDups.removeDuplicates(inputLinkedList);
     System.out.println("Output: ");
     result.printLinkedList();
     System.out.println();
   }
 
   public static void testDoublyLinkedList(){
-    DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+    DoublyLinkedList<Character> doublyLinkedList = new DoublyLinkedList<>();
     doublyLinkedList.addNode('A');
     doublyLinkedList.addNode('B');
     doublyLinkedList.addNode('C');
