@@ -2,10 +2,10 @@ package algorithm.linkedlists;
 
 public class Main {
   public static void main(String[] args){
-//    testDoublyLinkedList();
-//    testSinglyLinkedList();
-//    testRemoveDups();
-//    testKthFromLast();
+    testDoublyLinkedList();
+    testSinglyLinkedList();
+    testRemoveDups();
+    testKthFromLast();
     testDeleteMiddleNode();
   }
 
