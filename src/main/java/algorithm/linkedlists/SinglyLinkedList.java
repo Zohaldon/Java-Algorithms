@@ -27,4 +27,58 @@ public class SinglyLinkedList<T> {
      current = current.next;
     }
   }
+
+  public SinglyNode<T> getNodeAtIndex(int index){
+    if(index > size || head == null || index < 0)
+      throw new ArrayIndexOutOfBoundsException();
+
+    SinglyNode<T> current = head;
+
+    for(int i = 0; i <= index; i++){
+      if(i == index)
+        break;
+      current = current.next;
+    }
+
+    return current;
+  }
+
+  public void deleteNode(SinglyNode<T> nodeToDelete){
+    // An Algorithm that deletes the node of a singly linked list
+    // Example: Delete node c for a -> b -> c -> d -> e -> f -> results in a -> b -> d -> e -> f ->
+    if(size == 0)
+      return;
+    if(size == 1){
+      head = tail = null;
+      size--;
+    } else if(size == 2){
+      tail = nodeToDelete;
+      head.next = null;
+      size--;
+    } else {
+      SinglyNode<T> prevNode = null;
+      SinglyNode<T> current = head;
+      SinglyNode<T> nextNode = head;
+
+      for(int i = 0; i < size; i++){
+        nextNode = current.next;
+        if(current == nodeToDelete){
+          if(current ==  head){
+            // we are removing first node
+            head = nextNode;
+          } else if(current == tail){
+            tail = prevNode;
+            tail.next = null;
+          } else {
+            prevNode.next = nextNode;
+          }
+
+          size--;
+          break;
+        }
+        prevNode = current;
+        current = current.next;
+      }
+    }
+  }
 }

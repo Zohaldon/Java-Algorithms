@@ -2,10 +2,11 @@ package algorithm.linkedlists;
 
 public class Main {
   public static void main(String[] args){
-    testDoublyLinkedList();
-    testSinglyLinkedList();
-    testRemoveDups();
-    testKthFromLast();
+//    testDoublyLinkedList();
+//    testSinglyLinkedList();
+//    testRemoveDups();
+//    testKthFromLast();
+    testDeleteMiddleNode();
   }
 
   public static void testRemoveDups(){
@@ -44,22 +45,34 @@ public class Main {
   }
 
   public static void testSinglyLinkedList(){
-    SinglyLinkedList<Character> singlyLinkedList = new SinglyLinkedList<>();
-    singlyLinkedList.addNode('a');
-    singlyLinkedList.addNode('b');
-
+    SinglyLinkedList<Character> singlyLinkedList = generateAlphabeticalSinglyList();
     singlyLinkedList.print();
   }
 
   public static void testKthFromLast(){
+    SinglyLinkedList<Character> singlyLinkedList = generateAlphabeticalSinglyList();
+    System.out.println(KthFromLast.getKthFromLast(singlyLinkedList, 3).data);
+  }
+
+  public static void testDeleteMiddleNode(){
+    SinglyLinkedList<Character> singlyLinkedList = generateAlphabeticalSinglyList();
+    System.out.println("Input: ");
+    singlyLinkedList.print();
+    SinglyNode<Character> nodeToDelete = singlyLinkedList.head.next.next;
+    singlyLinkedList.deleteNode(nodeToDelete);
+    System.out.println("\nOutput: ");
+    singlyLinkedList.print();
+  }
+
+  public static SinglyLinkedList<Character> generateAlphabeticalSinglyList(){
     SinglyLinkedList<Character> singlyLinkedList = new SinglyLinkedList<>();
     singlyLinkedList.addNode('a');
     singlyLinkedList.addNode('b');
     singlyLinkedList.addNode('c');
     singlyLinkedList.addNode('d');
     singlyLinkedList.addNode('e');
+    singlyLinkedList.addNode('f');
 
-
-    System.out.println(KthFromLast.getKthFromLast(singlyLinkedList, 3).data);
+    return singlyLinkedList;
   }
 }
