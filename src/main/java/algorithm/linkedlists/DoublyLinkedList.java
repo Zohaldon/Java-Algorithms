@@ -1,28 +1,16 @@
 package algorithm.linkedlists;
 
-public class DoublyLinkedList {
+public class DoublyLinkedList<T> {
   // Starting and ending node of the DoublyLinkedList
-  Node head, tail = null;
+  DoublyNode<T> head, tail = null;
   private int size = 0;
-
-  public static class Node {
-    public Node prev;
-    public Node next;
-    public char data;
-
-    Node(char data){
-      this.data = data;
-      next = null;
-      prev = null;
-    }
-  }
 
   public int size() {
     return size;
   }
 
-  public void addNode(char data){
-    Node newNode = new Node(data);
+  public void addNode(T data){
+    DoublyNode<T> newNode = new DoublyNode<T>(data);
 
     if(head == null){
       head = tail = newNode;
@@ -39,7 +27,7 @@ public class DoublyLinkedList {
   }
 
   public void removeNodeAtIndex(int removeIndex){
-    Node nodeToRemove = head;
+    DoublyNode<T> nodeToRemove = head;
     if(removeIndex <= size - 1){
       for(int i = 0; i < size; i++){
         if(i == removeIndex){
@@ -51,7 +39,7 @@ public class DoublyLinkedList {
     }
   }
 
-  public void removeNode(Node node){
+  public void removeNode(DoublyNode<T> node){
     if(size == 1){
       head = tail = null;
       size = 0;
@@ -60,8 +48,8 @@ public class DoublyLinkedList {
       // Null <-- A <-- B <-- C
 
       // prevNode -> node -> nextNode
-      Node prevNode = node.prev;
-      Node nextNode = node.next;
+      DoublyNode<T> prevNode = node.prev;
+      DoublyNode<T> nextNode = node.next;
       if(prevNode == null){
         // we are dealing with head
         nextNode.prev = null;
@@ -80,11 +68,11 @@ public class DoublyLinkedList {
     }
   }
 
-  public Node get(int index){
+  public DoublyNode<T> get(int index){
     if(size == 0 || index > size)
       return null;
 
-    Node current = head;
+    DoublyNode<T> current = head;
     for(int i = 0; i < size; i++){
       if(i == index)
         break;
@@ -98,7 +86,7 @@ public class DoublyLinkedList {
     if(head == null){
       System.out.println("Doubly LinkedList is empty");
     } else {
-      Node current = head;
+      DoublyNode<T> current = head;
       while(current != null){
         System.out.print(current.data + " -> ");
         current = current.next;
