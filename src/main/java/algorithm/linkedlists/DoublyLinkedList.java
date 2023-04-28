@@ -40,6 +40,7 @@ public class DoublyLinkedList<T> {
   }
 
   public void removeNode(DoublyNode<T> node){
+    //RunTime: O(N)
     if(size == 1){
       head = tail = null;
       size = 0;
