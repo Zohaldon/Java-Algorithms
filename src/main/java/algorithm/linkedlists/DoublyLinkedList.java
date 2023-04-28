@@ -10,7 +10,7 @@ public class DoublyLinkedList<T> {
   }
 
   public void addNode(T data){
-    DoublyNode<T> newNode = new DoublyNode<T>(data);
+    DoublyNode<T> newNode = new DoublyNode<>(data);
 
     if(head == null){
       head = tail = newNode;
