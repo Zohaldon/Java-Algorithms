@@ -58,7 +58,7 @@ public class SinglyLinkedList<T> {
     } else {
       SinglyNode<T> prevNode = null;
       SinglyNode<T> current = head;
-      SinglyNode<T> nextNode = head;
+      SinglyNode<T> nextNode;
 
       for(int i = 0; i < size; i++){
         nextNode = current.next;
