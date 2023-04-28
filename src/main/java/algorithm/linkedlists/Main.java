@@ -7,6 +7,7 @@ public class Main {
     testRemoveDups();
     testKthFromLast();
     testDeleteMiddleNode();
+    testPartition();
   }
 
   public static void testRemoveDups(){
@@ -64,6 +65,12 @@ public class Main {
     singlyLinkedList.print();
   }
 
+  public static void testPartition(){
+    SinglyLinkedList<Integer> singlyLinkedList = generateRandomIntegerSinglyList();
+    SinglyLinkedList<Integer> outputList = Partition.partitionSinglyLinkedList(singlyLinkedList, 5);
+    outputList.print();
+  }
+
   public static SinglyLinkedList<Character> generateAlphabeticalSinglyList(){
     SinglyLinkedList<Character> singlyLinkedList = new SinglyLinkedList<>();
     singlyLinkedList.addNode('a');
@@ -72,6 +79,19 @@ public class Main {
     singlyLinkedList.addNode('d');
     singlyLinkedList.addNode('e');
     singlyLinkedList.addNode('f');
+
+    return singlyLinkedList;
+  }
+
+  public static SinglyLinkedList<Integer> generateRandomIntegerSinglyList(){
+    SinglyLinkedList<Integer> singlyLinkedList = new SinglyLinkedList<>();
+    singlyLinkedList.addNode(3);
+    singlyLinkedList.addNode(5);
+    singlyLinkedList.addNode(8);
+    singlyLinkedList.addNode(5);
+    singlyLinkedList.addNode(10);
+    singlyLinkedList.addNode(2);
+    singlyLinkedList.addNode(1);
 
     return singlyLinkedList;
   }
