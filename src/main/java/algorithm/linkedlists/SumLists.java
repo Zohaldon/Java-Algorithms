@@ -5,7 +5,7 @@ package algorithm.linkedlists;
 public class SumLists {
   // Runtime: O (N * M)
   public static SinglyLinkedList<Integer> sumLinkedListReverse(SinglyLinkedList<Integer> firstList, SinglyLinkedList<Integer> secondList){
-    SinglyLinkedList<Integer> answerList = new SinglyLinkedList<Integer>();
+    SinglyLinkedList<Integer> answerList = new SinglyLinkedList<>();
     if(firstList.size() < 1  && secondList.size() < 1)
       return answerList;
 
