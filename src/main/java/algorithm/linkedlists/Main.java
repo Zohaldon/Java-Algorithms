@@ -68,6 +68,9 @@ public class Main {
   public static void testPartition(){
     SinglyLinkedList<Integer> singlyLinkedList = generateRandomIntegerSinglyList();
     SinglyLinkedList<Integer> outputList = Partition.partitionSinglyLinkedList(singlyLinkedList, 5);
+    System.out.println("\nInput: ");
+    singlyLinkedList.print();
+    System.out.println("\nOutput: ");
     outputList.print();
   }
 
