@@ -47,7 +47,7 @@ public class SumLists {
       return answer;
 
     padLists(firstList, secondList);
-    List<Integer> summationAtPlace = new ArrayList<Integer>();
+    List<Integer> summationAtPlace = new ArrayList<>();
     SinglyNode<Integer> firstListNode = firstList.head;
     SinglyNode<Integer> secondListNode = secondList.head;
     while(firstListNode != null || secondListNode != null){
@@ -65,9 +65,7 @@ public class SumLists {
 
   private static void padLists(SinglyLinkedList<Integer> firstList, SinglyLinkedList<Integer> secondList){
     // For summing list in forward way we would need to add 0 as padding to account for missing integers on smaller lists
-    if(firstList.size() == secondList.size()){
-      return;
-    } else if (firstList.size() > secondList.size()) {
+    if (firstList.size() > secondList.size()) {
       padList(secondList, firstList.size() - secondList.size());
     } else{
       padList(firstList, secondList.size() - firstList.size());
