@@ -13,6 +13,7 @@ public class Main {
   }
 
   public static void testRemoveDups(){
+    System.out.println("\n\n==================Test Remove Duplicate Node==================");
     DoublyLinkedList<Character> inputLinkedList = new DoublyLinkedList<>();
     inputLinkedList.addNode('a');
     inputLinkedList.addNode('b');
@@ -30,6 +31,7 @@ public class Main {
   }
 
   public static void testDoublyLinkedList(){
+    System.out.println("\n\n==================Test Doubly Linked List Implementation==================");
     DoublyLinkedList<Character> doublyLinkedList = new DoublyLinkedList<>();
     doublyLinkedList.addNode('A');
     doublyLinkedList.addNode('B');
@@ -48,16 +50,22 @@ public class Main {
   }
 
   public static void testSinglyLinkedList(){
+    System.out.println("\n==================Test Singly Linked List Implementation==================");
     SinglyLinkedList<Character> singlyLinkedList = generateAlphabeticalSinglyList();
     singlyLinkedList.print();
   }
 
   public static void testKthFromLast(){
+    System.out.println("\n\n==================Test Kth From Last Node==================");
     SinglyLinkedList<Character> singlyLinkedList = generateAlphabeticalSinglyList();
-    System.out.println(KthFromLast.getKthFromLast(singlyLinkedList, 3).data);
+    System.out.println("Input:");
+    singlyLinkedList.print();
+    int kthFromLast = 3;
+    System.out.println("\n" + kthFromLast + "th From last(index starts from 0): " + KthFromLast.getKthFromLast(singlyLinkedList, kthFromLast).data);
   }
 
   public static void testDeleteMiddleNode(){
+    System.out.println("\n\n==================Test Delete Middle Node==================");
     SinglyLinkedList<Character> singlyLinkedList = generateAlphabeticalSinglyList();
     System.out.println("Input: ");
     singlyLinkedList.print();
@@ -68,6 +76,7 @@ public class Main {
   }
 
   public static void testPartition(){
+    System.out.println("\n\n==================Test Partition List by Given Node==================");
     SinglyLinkedList<Integer> singlyLinkedList = generateRandomIntegerSinglyList();
     SinglyLinkedList<Integer> outputList = Partition.partitionSinglyLinkedList(singlyLinkedList, 5);
     System.out.println("\nInput: ");
