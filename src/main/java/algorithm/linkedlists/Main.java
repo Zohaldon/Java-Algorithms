@@ -9,6 +9,7 @@ public class Main {
     testDeleteMiddleNode();
     testPartition();
     testSumReverse();
+    testSum();
   }
 
   public static void testRemoveDups(){
@@ -76,7 +77,7 @@ public class Main {
   }
 
   public static void testSumReverse(){
-    System.out.println("\n\n==================Test Sum==================");
+    System.out.println("\n\n==================Test Sum Reverse==================");
     SinglyLinkedList<Integer> firstList = new SinglyLinkedList<>();
     firstList.addNode(2);
     firstList.addNode(5);
@@ -93,6 +94,27 @@ public class Main {
     secondList.print();
     System.out.println("\nOutput: ");
     SumLists.sumLinkedListReverse(firstList, secondList).print();
+  }
+
+  public static void testSum(){
+    System.out.println("\n\n==================Test Sum==================");
+    SinglyLinkedList<Integer> firstList = new SinglyLinkedList<>();
+    firstList.addNode(9);
+    firstList.addNode(9);
+    firstList.addNode(9);
+
+
+    SinglyLinkedList<Integer> secondList = new SinglyLinkedList<>();
+    secondList.addNode(5);
+    secondList.addNode(9);
+    secondList.addNode(6);
+
+    System.out.print("Inputs: \n");
+    firstList.print();
+    System.out.println();
+    secondList.print();
+    System.out.println("\nOutput: ");
+    SumLists.sumLinkedList(firstList, secondList).print();
   }
 
   public static SinglyLinkedList<Character> generateAlphabeticalSinglyList(){

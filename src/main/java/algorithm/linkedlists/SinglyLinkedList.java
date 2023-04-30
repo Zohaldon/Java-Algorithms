@@ -80,4 +80,15 @@ public class SinglyLinkedList<T> {
       }
     }
   }
+
+  public void addNodeToHead(T data){
+    if(size == 0){
+      addNode(data);
+    } else {
+      SinglyNode<T> node = new SinglyNode<>(data);
+      node.next = head;
+      head = node;
+      size++;
+    }
+  }
 }
