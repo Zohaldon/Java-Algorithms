@@ -10,6 +10,7 @@ public class Main {
     testPartition();
     testSumReverse();
     testSum();
+    testIsPalindrome();
   }
 
   public static void testRemoveDups(){
@@ -124,6 +125,39 @@ public class Main {
     secondList.print();
     System.out.println("\nOutput: ");
     SumLists.sumLinkedList(firstList, secondList).print();
+  }
+
+  public static void testIsPalindrome(){
+    System.out.println("\n\n==================Test Palindrome==================");
+    SinglyLinkedList<Character> palindromeList = new SinglyLinkedList<>();
+    palindromeList.addNode('m');
+    palindromeList.addNode('a');
+    palindromeList.addNode('l');
+    palindromeList.addNode('a');
+    palindromeList.addNode('y');
+    palindromeList.addNode('a');
+    palindromeList.addNode('l');
+    palindromeList.addNode('a');
+    palindromeList.addNode('m');
+
+    System.out.print("Inputs: ");
+    palindromeList.print();
+    boolean result = Palindrome.isPalindromeList(palindromeList);
+    System.out.println("\nOutput: " + result);
+
+    SinglyLinkedList<Character> invalidPalindrome = new SinglyLinkedList<>();
+    invalidPalindrome.addNode('t');
+    invalidPalindrome.addNode('o');
+    invalidPalindrome.addNode('r');
+    invalidPalindrome.addNode('o');
+    invalidPalindrome.addNode('n');
+    invalidPalindrome.addNode('t');
+    invalidPalindrome.addNode('o');
+
+    System.out.print("Inputs: ");
+    invalidPalindrome.print();
+    result = Palindrome.isPalindromeList(invalidPalindrome);
+    System.out.println("\nOutput: " + result);
   }
 
   public static SinglyLinkedList<Character> generateAlphabeticalSinglyList(){
