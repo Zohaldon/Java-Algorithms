@@ -11,6 +11,7 @@ public class Main {
     testSumReverse();
     testSum();
     testIsPalindrome();
+    testIntersection();
   }
 
   public static void testRemoveDups(){
@@ -160,6 +161,30 @@ public class Main {
     System.out.println("\nOutput: " + result);
   }
 
+  public static void testIntersection(){
+    System.out.println("\n\n==================Test Intersection==================");
+    SinglyLinkedList<Integer> firstList = new SinglyLinkedList<>();
+    firstList.addNode(9);
+    firstList.addNode(2);
+    firstList.addNode(3);
+    firstList.addNode(7);
+    firstList.addNode(4);
+    firstList.addNode(5);
+
+
+    SinglyLinkedList<Integer> secondList = new SinglyLinkedList<>();
+    secondList.addNode(5);
+    secondList.addNode(9);
+
+    System.out.print("Inputs: \n");
+    firstList.print();
+    System.out.println();
+    secondList.print();
+    System.out.println("\nOutput: ");
+    var result = Intersection.findIntersection(firstList, secondList);
+    var printResult = result == null ? "None" : result.data;
+    System.out.println("Intersection at node: " +  printResult);
+  }
   public static SinglyLinkedList<Character> generateAlphabeticalSinglyList(){
     SinglyLinkedList<Character> singlyLinkedList = new SinglyLinkedList<>();
     singlyLinkedList.addNode('a');
