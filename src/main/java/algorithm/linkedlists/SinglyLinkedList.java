@@ -91,4 +91,17 @@ public class SinglyLinkedList<T> {
       size++;
     }
   }
+
+  public void addNodesToTail(SinglyNode<T> node){
+    while(node != null){
+      if(head == null){
+        head = tail = node;
+      } else {
+        tail.next = node;
+        tail = node;
+      }
+      size ++;
+      node = node.next;
+    }
+  }
 }

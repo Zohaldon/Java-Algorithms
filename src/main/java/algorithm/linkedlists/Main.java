@@ -174,7 +174,9 @@ public class Main {
 
     SinglyLinkedList<Integer> secondList = new SinglyLinkedList<>();
     secondList.addNode(5);
-    secondList.addNode(9);
+    secondList.addNodesToTail(firstList.head.next.next);
+
+    SinglyLinkedList<Integer> thirdList = generateRandomIntegerSinglyList();
 
     System.out.print("Inputs: \n");
     firstList.print();
@@ -184,6 +186,16 @@ public class Main {
     var result = Intersection.findIntersection(firstList, secondList);
     var printResult = result == null ? "None" : result.data;
     System.out.println("Intersection at node: " +  printResult);
+
+    System.out.print("\nInputs: \n");
+    firstList.print();
+    System.out.println();
+    thirdList.print();
+    System.out.println("\nOutput: ");
+    result = Intersection.findIntersection(firstList, thirdList);
+    printResult = result == null ? "None" : result.data;
+    System.out.println("Intersection at node: " +  printResult);
+
   }
   public static SinglyLinkedList<Character> generateAlphabeticalSinglyList(){
     SinglyLinkedList<Character> singlyLinkedList = new SinglyLinkedList<>();

@@ -5,6 +5,7 @@ package algorithm.linkedlists;
 
 public class Intersection {
   public static SinglyNode<Integer> findIntersection(SinglyLinkedList<Integer> firstList, SinglyLinkedList<Integer> secondList){
+    // for intersection last two elements should match
     if(firstList.tail != secondList.tail || firstList.size() == 0 || secondList.size() == 0)
       return null;
 
