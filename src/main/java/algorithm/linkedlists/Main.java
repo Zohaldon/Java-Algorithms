@@ -12,6 +12,7 @@ public class Main {
     testSum();
     testIsPalindrome();
     testIntersection();
+    testLoopDetection();
   }
 
   public static void testRemoveDups(){
@@ -197,6 +198,24 @@ public class Main {
     System.out.println("Intersection at node: " +  printResult);
 
   }
+
+  public static void testLoopDetection(){
+    System.out.println("\n\n==================Test Loop Detection==================");
+    SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+    list.addNode(5);
+    list.addNode(2);
+    list.addNode(3);
+    list.addNode(7);
+    list.addNode(1);
+    list.addNode(8);
+    list.addNode(4);
+    list.tail.next = list.head.next.next;
+
+    var result = LoopDetection.detectLoop(list);
+    var printResult = result == null ? "There is no loop" : result.data;
+    System.out.println("The loop starts at: " + printResult);
+  }
+
   public static SinglyLinkedList<Character> generateAlphabeticalSinglyList(){
     SinglyLinkedList<Character> singlyLinkedList = new SinglyLinkedList<>();
     singlyLinkedList.addNode('a');
