@@ -15,7 +15,7 @@ public class ArrayMultiStack {
   // How much length each stack is occupying
   private final int[] sizes;
 
-  public ArrayMultiStack(int capacity) throws InvalidAlgorithmParameterException {
+  public ArrayMultiStack(int capacity){
     // TODO: handle invalid value for capacity
     // create 3 stacks of specified length
     stackCapacity = capacity;
