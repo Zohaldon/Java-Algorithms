@@ -18,9 +18,8 @@ public class Main {
     myStack.printAll();
     try {
       myStack.pop(2);
-    } catch (NoSuchObjectException e){
-      System.out.println(e.toString());
-    }
+    } catch (NoSuchObjectException ignored) {}
+
     myStack.printAll();
   }
 }
