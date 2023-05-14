@@ -1,5 +1,7 @@
 package algorithm.stacksandqueues;
 
+import java.rmi.NoSuchObjectException;
+
 public class Main {
   public static void main(String[] args){
     testArrayMultiStack();
@@ -7,11 +9,18 @@ public class Main {
 
   private static void testArrayMultiStack(){
     ArrayMultiStack myStack = new ArrayMultiStack(3);
-    myStack.push(0, 4);
-    myStack.push(1, 5);
+    myStack.push(2, 1);
+    myStack.push(2, 2);
+    myStack.push(2, 3);
+    myStack.push(1, 1);
+    myStack.push(1, 2);
+    myStack.push(0, 1);
     myStack.printAll();
-    int popanswer = myStack.pop(0);
-    System.out.println("pop answer:" + popanswer);
+    try {
+      myStack.pop(2);
+    } catch (NoSuchObjectException e){
+      System.out.println(e.toString());
+    }
     myStack.printAll();
   }
 }

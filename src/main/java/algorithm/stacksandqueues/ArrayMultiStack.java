@@ -2,6 +2,7 @@
 
 package algorithm.stacksandqueues;
 
+import java.rmi.NoSuchObjectException;
 import java.util.Arrays;
 
 public class ArrayMultiStack {
@@ -21,6 +22,7 @@ public class ArrayMultiStack {
   }
 
   public void push(int stackNum, int value){
+    // TODO: Handle invalid stackNum value
     if(sizes[stackNum] >= stackCapacity ){
       throw new StackOverflowError("Stack is already at its full capacity");
     }
@@ -30,21 +32,24 @@ public class ArrayMultiStack {
     sizes[stackNum] += 1;
   }
 
-  public Integer pop(int stackNum){
-    int result = 0;
+  public Integer pop(int stackNum) throws NoSuchObjectException {
+    if (stackNum > numberOfStacks)
+      throw new NoSuchObjectException("");
 
-    if(sizes[stackNum] > 0){
-      int returnIndex = getIndexOfTop(stackNum);
-      result = values[returnIndex];
-      values[returnIndex] = 0;
-      sizes[stackNum] -= 1;
-    }
+    if (sizes[stackNum] == 0)
+      return null;
+
+    int indexToRemove = getIndexOfTop(stackNum) - 1;
+    int result = values[indexToRemove];
+    values[indexToRemove] = 0;
+    sizes[stackNum] -= 1;
     return result;
   }
 
   public void printAll(){
     System.out.println(Arrays.toString(values));
   }
+
   private Integer getIndexOfTop(int stackNum){
     int sizeRemaining = stackCapacity - sizes[stackNum];
     return ((stackNum + 1) * stackCapacity) - sizeRemaining;
