@@ -18,6 +18,8 @@ public class Main {
     myStack.printAll();
     try {
       myStack.pop(2);
+      int peek = myStack.peek(2);
+      System.out.println("Peeked Value: " + peek);
     } catch (NoSuchObjectException ignored) {}
 
     myStack.printAll();

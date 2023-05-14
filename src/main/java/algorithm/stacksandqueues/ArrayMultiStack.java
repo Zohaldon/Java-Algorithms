@@ -48,6 +48,17 @@ public class ArrayMultiStack {
     return result;
   }
 
+  public Integer peek(int stackNum) throws  NoSuchObjectException {
+    if (stackNum > numberOfStacks)
+      throw new NoSuchObjectException("");
+
+    if (sizes[stackNum] == 0)
+      return null;
+
+    int indexToPeek = getIndexOfTop(stackNum) - 1;
+    return values[indexToPeek];
+  }
+
   public void printAll(){
     System.out.println(Arrays.toString(values));
   }
