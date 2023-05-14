@@ -6,7 +6,7 @@ import java.rmi.NoSuchObjectException;
 import java.util.Arrays;
 
 public class ArrayMultiStack {
-  private int numberOfStacks = 3;
+  private final int numberOfStacks = 3;
   // How big should 3 stacks be?
   private int stackCapacity;
   // Values to be made available
