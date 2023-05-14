@@ -3,6 +3,7 @@
 package algorithm.stacksandqueues;
 
 import java.rmi.NoSuchObjectException;
+import java.security.InvalidAlgorithmParameterException;
 import java.util.Arrays;
 
 public class ArrayMultiStack {
@@ -14,7 +15,8 @@ public class ArrayMultiStack {
   // How much length each stack is occupying
   private final int[] sizes;
 
-  public ArrayMultiStack(int capacity){
+  public ArrayMultiStack(int capacity) throws InvalidAlgorithmParameterException {
+    // TODO: handle invalid value for capacity
     // create 3 stacks of specified length
     stackCapacity = capacity;
     values = new int[numberOfStacks * capacity];
