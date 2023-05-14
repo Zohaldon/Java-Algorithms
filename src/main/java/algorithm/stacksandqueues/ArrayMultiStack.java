@@ -8,11 +8,11 @@ import java.util.Arrays;
 public class ArrayMultiStack {
   private final int numberOfStacks = 3;
   // How big should 3 stacks be?
-  private int stackCapacity;
+  private final int stackCapacity;
   // Values to be made available
-  private int[] values;
+  private final int[] values;
   // How much length each stack is occupying
-  private int[] sizes;
+  private final int[] sizes;
 
   public ArrayMultiStack(int capacity){
     // create 3 stacks of specified length
