@@ -19,7 +19,6 @@ public class AStack {
     if (size == 0)
       return;
 
-    DataNode<Integer> top = topNode;
     topNode = topNode.next;
     size--;
   }
