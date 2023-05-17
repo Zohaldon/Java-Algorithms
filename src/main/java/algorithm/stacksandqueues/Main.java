@@ -36,6 +36,8 @@ public class Main {
     stack.push(11);
     stack.push(3);
     stack.push(1);
+    stack.printAll();
+    System.out.println();
 
     stack.pop();
     stack.printAll();
