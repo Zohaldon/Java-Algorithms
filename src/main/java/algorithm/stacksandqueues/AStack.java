@@ -1,26 +1,29 @@
 package algorithm.stacksandqueues;
 
 public class AStack {
-  private DataNode<Integer> top = null;
+  private DataNode<Integer> topNode = null;
   private int size = 0;
 
-  public void push(DataNode<Integer> newNode) {
+  public void push(int data) {
+    DataNode<Integer> newNode = new DataNode<>(data);
     if (size == 0) {
-      top = newNode;
+      topNode = newNode;
     } else {
-      newNode.next = top;
-      top = newNode;
+      newNode.next = topNode;
+      topNode = newNode;
     }
     size++;
   }
 
-  public DataNode<Integer> pop() {
+  public Integer pop() {
     if (size == 0)
       return null;
-    DataNode<Integer> returnNode = top;
-    top = returnNode.next;
+
+    DataNode<Integer> top = topNode;
+    topNode = topNode.next;
     size--;
-    return returnNode;
+
+    return top.data;
   }
 
   public DataNode<Integer> peek(){
@@ -28,6 +31,6 @@ public class AStack {
       return null;
     }
 
-    return top;
+    return topNode;
   }
 }

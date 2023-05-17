@@ -2,6 +2,7 @@
 package algorithm.stacksandqueues;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class StackMin {
   private AStack minStack = new AStack();
@@ -13,18 +14,34 @@ public class StackMin {
   public void push(int data){
     DataNode<Integer> newNode = new DataNode<>(data);
 
-    if(top == null){
+    if(size == 0){
       top = minNode = newNode;
-      minStack.push(minNode);
-    } else {
-      newNode.next = top;
-      top = newNode;
-      if(newNode.data < minNode.data){
-        minStack.push(newNode);
-        minNode = newNode;
-      }
+      minStack.push(newNode.data);
+      size++;
+      return;
     }
+
+    if(newNode.data < minNode.data){
+      minNode = newNode;
+      minStack.push(minNode.data);
+    }
+
+    newNode.next = top;
+    top = newNode;
     size++;
+  }
+
+  public DataNode<Integer> pop(){
+    DataNode<Integer> nextTop = top.next;
+    DataNode<Integer> currentTop = top;
+
+    if(Objects.equals(top.data, minNode.data)){
+      minStack.pop();
+      minNode = minStack.peek();
+    }
+    top = nextTop;
+    size--;
+    return currentTop;
   }
 
   public DataNode<Integer> min(){

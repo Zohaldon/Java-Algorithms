@@ -31,11 +31,26 @@ public class Main {
   private static void testStackMin(){
     System.out.println("\n\n==================Test Min Stack ==================");
     StackMin stack = new StackMin();
-    stack.push(15);
-    stack.push(3);
     stack.push(10);
+    stack.push(4);
+    stack.push(3);
+    stack.push(1);
+
+
+    stack.pop();
     stack.printAll();
     System.out.println("Min Node: " + stack.min().data);
+
+    stack.pop();
+    stack.printAll();
+    System.out.println("Min Node: " + stack.min().data);
+
+
+    stack.pop();
+    stack.printAll();
+    System.out.println("Min Node: " + stack.min().data);
+
+    stack.printAll();
     System.out.println("========================================================");
   }
 }
