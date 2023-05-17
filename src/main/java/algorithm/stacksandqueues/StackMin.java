@@ -30,25 +30,17 @@ public class StackMin {
     size++;
   }
 
-  public DataNode<Integer> pop(){
-    DataNode<Integer> nextTop = top.next;
-    DataNode<Integer> currentTop = top;
-
+  public void pop(){
     if(Objects.equals(top.data, minNode.data)){
       minStack.pop();
       minNode = minStack.peek();
     }
-    top = nextTop;
+    top = top.next;
     size--;
-    return currentTop;
   }
 
   public DataNode<Integer> min(){
     return minStack.peek();
-  }
-
-  public DataNode<Integer> peek(){
-    return top;
   }
 
   public void printAll(){

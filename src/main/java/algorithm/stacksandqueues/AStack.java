@@ -15,15 +15,13 @@ public class AStack {
     size++;
   }
 
-  public Integer pop() {
+  public void pop() {
     if (size == 0)
-      return null;
+      return;
 
     DataNode<Integer> top = topNode;
     topNode = topNode.next;
     size--;
-
-    return top.data;
   }
 
   public DataNode<Integer> peek(){
