@@ -1,11 +1,10 @@
 // A Stack that can return the min node in O(1) time while maintaining O(1) runtime for Pop and Push
 package algorithm.stacksandqueues;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class StackMin {
-  private AStack minStack = new AStack();
+  private final AStack minStack = new AStack();
   private DataNode<Integer> minNode = null;
 
   private DataNode<Integer> top = null;
