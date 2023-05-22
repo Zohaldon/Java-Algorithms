@@ -2,7 +2,7 @@ package algorithm.stacksandqueues;
 
 public class StackOfStacks {
   public AStack top;
-  private int count = 0;
+  private int count;
 
   public StackOfStacks(){
     top = null;

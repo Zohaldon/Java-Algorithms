@@ -5,9 +5,9 @@ package algorithm.stacksandqueues;
 import java.text.MessageFormat;
 
 public class SetOfStacks {
-    private int capacity;
+    private final int capacity;
 
-    private StackOfStacks stackCollection = new StackOfStacks();
+    private final StackOfStacks stackCollection = new StackOfStacks();
 
     public SetOfStacks(int threshold){
         capacity = threshold;
