@@ -6,6 +6,7 @@ public class Main {
   public static void main(String[] args){
     testArrayMultiStack();
     testStackMin();
+    testSetOfStacks();
   }
 
   private static void testArrayMultiStack(){
@@ -51,6 +52,25 @@ public class Main {
     stack.pop();
     stack.printAll();
     System.out.println("Min Node: " + stack.min().data);
+    System.out.println("========================================================");
+  }
+
+  private static void testSetOfStacks(){
+    System.out.println("\n\n================== Test Set of Stack ==================");
+    SetOfStacks testStack = new SetOfStacks(3);
+    testStack.push(10);
+    testStack.push(2);
+    testStack.push(30);
+    testStack.push(49);
+    testStack.push(55);
+    testStack.push(63);
+    testStack.push(72);
+    testStack.push(82);
+    testStack.printAll();
+    System.out.println("-----------------------------------------");
+    testStack.pop();
+    testStack.pop();
+    testStack.printAll();
     System.out.println("========================================================");
   }
 }
