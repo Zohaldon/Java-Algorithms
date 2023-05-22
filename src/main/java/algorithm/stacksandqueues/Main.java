@@ -7,6 +7,7 @@ public class Main {
     testArrayMultiStack();
     testStackMin();
     testSetOfStacks();
+    testQueueWithStack();
   }
 
   private static void testArrayMultiStack(){
@@ -71,6 +72,22 @@ public class Main {
     testStack.pop();
     testStack.pop();
     testStack.printAll();
+    System.out.println("========================================================");
+  }
+
+  private static void testQueueWithStack(){
+    System.out.println("\n\n================== Test Queue with Stack ==================");
+    QueueWithStack<Integer> testQueue = new QueueWithStack<>();
+    testQueue.push(1);
+    testQueue.push(2);
+    testQueue.push(3);
+    testQueue.push(4);
+    testQueue.push(5);
+    System.out.println("Peek: " + testQueue.peek());
+    testQueue.pop();
+    testQueue.pop();
+    testQueue.push(11);
+    System.out.println("Peek after 2 pop and 1 Insert: " + testQueue.peek());
     System.out.println("========================================================");
   }
 }
