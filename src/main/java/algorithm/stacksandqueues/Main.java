@@ -1,6 +1,7 @@
 package algorithm.stacksandqueues;
 
 import java.rmi.NoSuchObjectException;
+import java.util.Stack;
 
 public class Main {
   public static void main(String[] args){
@@ -8,6 +9,7 @@ public class Main {
     testStackMin();
     testSetOfStacks();
     testQueueWithStack();
+    testSortStack();
   }
 
   private static void testArrayMultiStack(){
@@ -88,6 +90,22 @@ public class Main {
     testQueue.pop();
     testQueue.push(11);
     System.out.println("Peek after 2 pop and 1 Insert: " + testQueue.peek());
+    System.out.println("========================================================");
+  }
+
+  private static void testSortStack(){
+    System.out.println("\n\n================== Test Sort Stack ==================");
+    Stack<Integer> testStack = new Stack<>();
+    testStack.push(7);
+    testStack.push(8);
+    testStack.push(1);
+    testStack.push(11);
+    testStack.push(3);
+    System.out.println("Input: " + testStack);
+    System.out.println("Top Element: " + testStack.peek());
+    testStack = SortedStack.sortStack(testStack);
+    System.out.println("Output: " + testStack);
+    System.out.println("Top Element: " + testStack.peek());
     System.out.println("========================================================");
   }
 }
