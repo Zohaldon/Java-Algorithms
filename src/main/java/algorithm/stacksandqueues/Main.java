@@ -1,5 +1,10 @@
 package algorithm.stacksandqueues;
 
+import algorithm.stacksandqueues.AnimalShelter.Animal;
+import algorithm.stacksandqueues.AnimalShelter.AnimalShelter;
+import algorithm.stacksandqueues.AnimalShelter.Cat;
+import algorithm.stacksandqueues.AnimalShelter.Dog;
+
 import java.rmi.NoSuchObjectException;
 import java.util.Stack;
 
@@ -10,6 +15,7 @@ public class Main {
     testSetOfStacks();
     testQueueWithStack();
     testSortStack();
+    testAnimalShelter();
   }
 
   private static void testArrayMultiStack(){
@@ -106,6 +112,34 @@ public class Main {
     testStack = SortedStack.sortStack(testStack);
     System.out.println("Output: " + testStack);
     System.out.println("Top Element: " + testStack.peek());
+    System.out.println("========================================================");
+  }
+
+  private static void testAnimalShelter(){
+    System.out.println("\n\n================== Test Animal Shelter ==================");
+    AnimalShelter testShelter = new AnimalShelter();
+    try {
+      testShelter.enqueue(new Dog("1 - First Dog"));
+      testShelter.enqueue(new Dog("2 - Second Dog"));
+      testShelter.enqueue(new Cat("3 - First Cat"));
+      testShelter.enqueue(new Dog("4 - Third Dog"));
+      testShelter.enqueue(new Cat("5 - Second Cat"));
+
+      Animal firstDequeuedAnimal = testShelter.dequeueAny();
+      System.out.println("Dequeue Any: " + firstDequeuedAnimal.name());
+
+      Cat firstDequeuedCat = testShelter.dequeueCat();
+      System.out.println("Dequeue Cat: " + firstDequeuedCat.name());
+
+      Dog firstDequeuedDog = testShelter.dequeueDog();
+      System.out.println("Dequeue Dog: " + firstDequeuedDog.name());
+
+      Animal secondDequeuedAnimal = testShelter.dequeueAny();
+      System.out.println("Dequeue Any: " + secondDequeuedAnimal.name());
+    } catch (Exception e){
+
+    }
+
     System.out.println("========================================================");
   }
 }
