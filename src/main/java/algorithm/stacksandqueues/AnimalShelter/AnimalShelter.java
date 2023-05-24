@@ -8,16 +8,12 @@ package algorithm.stacksandqueues.AnimalShelter;
 import java.util.LinkedList;
 
 public class AnimalShelter {
-  private LinkedList<Dog> dogQueue;
-  private LinkedList<Cat> catQueue;
+  private final LinkedList<Dog> dogQueue;
+  private final LinkedList<Cat> catQueue;
 
   public AnimalShelter(){
     dogQueue = new LinkedList<>();
     catQueue = new LinkedList<>();
-  }
-
-  private int size(){
-    return dogQueue.size() + catQueue.size();
   }
 
   public void enqueue(Animal animal){

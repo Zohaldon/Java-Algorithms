@@ -136,9 +136,7 @@ public class Main {
 
       Animal secondDequeuedAnimal = testShelter.dequeueAny();
       System.out.println("Dequeue Any: " + secondDequeuedAnimal.name());
-    } catch (Exception e){
-
-    }
+    } catch (Exception ignored) {}
 
     System.out.println("========================================================");
   }
